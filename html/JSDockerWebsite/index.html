@@ -1,0 +1,90 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="./css/scale.css">
+  <link rel="stylesheet" href="./css/heading.css">
+  <link rel="stylesheet" href="./css/button.css">
+  <link rel="stylesheet" href="./css/column.css">
+  <link rel="stylesheet" href="./css/checkbox.css">
+  <link rel="stylesheet" href="./css/textfield.css">
+
+  <script src='./js/toggleFunc.js';></script>
+  <script src='./js/contCreate.js';></script>
+  <script src='./js/contStop.js';></script>
+  <script src='./js/contRemove.js';></script>
+  <script src='./js/listImg.js';></script>
+  <script src='./js/listCont.js';></script>
+</head>
+
+<center>
+  <h1 ><u>Docker Web Portal</u></h1>
+</center>
+
+<div class="column" >
+    <center>
+    <button class="button" onclick="createToggle()">Create a Container</button></center>
+   
+    <div id="create" style="display:none;">
+        <input id='c1' type="text" placeholder="Container name" ><br>  
+        <input id='c2' type="text" placeholder="Image name"><br> 
+        <label  class="container">d - detatched
+            <input id ='cb1' type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+          <label  class="container">i - interactive
+            <input id ='cb2' type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+          <label  class="container">t - terminal
+            <input id ='cb3' type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label> 
+       <center><button class="button" type="submit" onclick="createContVal()">Submit</button></center>
+    </div>
+
+  </div>
+
+  <div class="column" >
+    <center>
+    <button class="button" onclick="execToggle()">Stop a Container</button>
+    <div id="exec" style="display:none;">
+        <input id="c3" type="text" placeholder="Container name"><br>  
+        <button class="button" onclick="stopContVal()" type="submit">Submit</button>
+    </div>
+</center>
+  </div>
+  <div class="column" >
+    <center>
+    <button class="button" onclick="removeToggle()">Remove a Container</button>
+    <div id="remove" style="display:none;">
+        <input id="c4" type="text" placeholder="Container name"><br>  
+        <button class="button" onclick="removeContVal()"  type="submit">Submit</button>
+    </div>
+</center>
+  </div>
+  <div class="column" >
+    <center>
+    <button class="button" onclick="listImg()" >List all Images</button>
+</center>
+  </div>
+  <div style="position:fixed;top:450px;left:37%">
+  <center>
+	  <button  class="button" onclick="listCont()" > Click to see all Containers </button><br><br>
+	  <h2 id='h2' style="font-family: 'Garamond',serif;">Below are the number of containers launched</h2>
+  </center>
+  </div>
+
+<div id='docker0' style="position: absolute;left: 1380px;bottom: 83px;"><img  src="./photos/d.jpg" width="153" height="91"></div>
+<div id='d0'><img  src="./photos/10.png"></div>
+<div id='d1'><img  src="./photos/9.png"></div>
+<div id='d2'><img  src="./photos/8.png"></div>
+<div id='d3'><img  src="./photos/7.png"></div>
+<div id='d4'><img  src="./photos/6.png"></div>
+<div id='d5'><img  src="./photos/5.png"></div>
+<div id='d6'><img  src="./photos/4.png"></div>
+<div id='d7'><img  src="./photos/3.png"></div>
+<div id='d8'><img  src="./photos/2.png"></div>
+<div id='d9'><img  src="./photos/1.png"></div>
+<div id='d10'><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="100px"></div>
+
+</html>
